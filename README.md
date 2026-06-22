@@ -26,14 +26,14 @@
 theorems = ("a", "(~(a&(~b)))")  # a 和 a->b
 
 # 语义蕴含判定：a, a->b 能否推出 b ?
-from logic_checker import isSemanticEntailment
+from logic_checker import semanticEntailment
 conclusion = "b"
-print(isSemanticEntailment(theorems, conclusion))  # 输出: True
+print(semanticEntailment(theorems, conclusion))  # 输出: True
 
 # 语法证明验证：检查给定的证明序列是否正确
-from logic_checker import isValidProof
+from logic_checker import syntacticProofCheck
 proof = ("a", "(~(a&(~b)))", "b")  # 利用 MP 推出 b
-print(isValidProof(theorems, proof))  # 输出: True
+print(syntacticProofCheck(theorems, proof))  # 输出: True
 ```
 
 ## 许可证
