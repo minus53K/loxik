@@ -1,6 +1,7 @@
 # Loxik —— 一个命题逻辑公式解析器
 
 这是一个测试项目，是我用来熟悉代码写作流程和命题逻辑基础的。
+
 项目的名字源于西班牙语的“逻辑”的逻辑语化读音，'x'读作国际音标中的/x/（汉语拼音中的'h'）
 
 ## 功能
@@ -21,9 +22,11 @@
 ## 快速示例
 
 ```python
+# 引入公理集
+theorems = ("a", "(~(a&(~b)))")  # a 和 a->b
+
 # 语义蕴含判定：a, a->b 能否推出 b ?
 from logic_checker import isSemanticEntailment
-theorems = ("a", "(~(a&(~b)))")  # a 和 a->b
 conclusion = "b"
 print(isSemanticEntailment(theorems, conclusion))  # 输出: True
 
