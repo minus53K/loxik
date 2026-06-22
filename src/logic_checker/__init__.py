@@ -4,7 +4,7 @@
 """
 
 from .semantics import semanticEntailment
-from .proof_checker import syntacticProofCheck
+from .syntax import syntacticProofCheck
 from .parser import ParseError
 
 
